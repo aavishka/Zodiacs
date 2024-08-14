@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZODIACOLOGY</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <style>
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 22%;
+      margin: 15px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .emoji {
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .card {
+        width: 45%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+
+    marquee {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body align="center">
+    <h1>ZODIACOLOGY</h1>
+  <marquee>
+    <h1><i>WHAT DOES YOUR SIGN SAY ABOUT YOU? WHAT DOES YOUR SIGN SAY ABOUT YOU? WHAT DOES YOUR SIGN SAY ABOUT YOU? WHAT DOES YOUR SIGN SAY ABOUT YOU? WHAT DOES YOUR SIGN SAY ABOUT YOU? WHAT DOES YOUR SIGN SAY ABOUT YOU? WHAT DOES YOUR SIGN SAY ABOUT YOU? </h1>
+  </marquee></i><br>
+  
+  <script>
+    const zodiacSigns = [
+      { name: "Aquarius", emoji: "♒", date: "20th January – 18th February", link: "https://en.wikipedia.org/wiki/Aquarius_(astrology)" },
+      { name: "Taurus", emoji: "♉", date: "20th April – 20th May", link: "https://en.wikipedia.org/wiki/Taurus_(astrology)" },
+      { name: "Aries", emoji: "♈", date: "21st March – 19th April", link: "https://en.wikipedia.org/wiki/Aries_(astrology)" },
+      { name: "Gemini", emoji: "♊", date: "21st May – 20th June", link: "https://en.wikipedia.org/wiki/Gemini_(astrology)" },
+      { name: "Cancer", emoji: "♋", date: "21st June – 22nd July", link: "https://en.wikipedia.org/wiki/Cancer_(astrology)" },
+      { name: "Leo", emoji: "♌", date: "23rd July – 22nd August", link: "https://en.wikipedia.org/wiki/Leo_(astrology)" },
+      { name: "Virgo", emoji: "♍", date: "23rd August – 22nd September", link: "https://en.wikipedia.org/wiki/Virgo_(astrology)" },
+      { name: "Libra", emoji: "♎", date: "23rd September – 22nd October", link: "https://en.wikipedia.org/wiki/Libra_(astrology)" },
+      { name: "Scorpio", emoji: "♏", date: "23rd October – 21st November", link: "https://en.wikipedia.org/wiki/Scorpio_(astrology)" },
+      { name: "Sagittarius", emoji: "♐", date: "22nd November – 21st December", link: "https://en.wikipedia.org/wiki/Sagittarius_(astrology)" },
+      { name: "Capricorn", emoji: "♑", date: "22nd December – 19th January", link: "https://en.wikipedia.org/wiki/Capricorn_(astrology)" },
+      { name: "Pisces", emoji: "♓", date: "19th February – 20th March", link: "https://en.wikipedia.org/wiki/Pisces_(astrology)" }
+    ];
+
+    const body = document.querySelector('body');
+
+    zodiacSigns.forEach(sign => {
+      const card = document.createElement('section');
+      card.className = 'card';
+
+      const emoji = document.createElement('div');
+      emoji.className = 'emoji';
+      emoji.textContent = sign.emoji;
+
+      const title = document.createElement('h4');
+      title.textContent = sign.name;
+
+      const date = document.createElement('p');
+      date.textContent = sign.date;
+
+      const link = document.createElement('a');
+      link.href = sign.link;
+      link.textContent = `Learn more about ${sign.name}`;
+      link.style.display = "block";
+      link.style.marginTop = "10px";
+      link.style.color = "#007bff";
+      link.style.textDecoration = "none";
+
+      card.appendChild(emoji);
+      card.appendChild(title);
+      card.appendChild(date);
+      card.appendChild(link);
+
+      body.appendChild(card);
+    });
+  </script>
+</body>
+<footer>
+    <nav>
+    </nav>
+</footer>
+</html>
